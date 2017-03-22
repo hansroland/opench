@@ -20,6 +20,7 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Data.Meteo.Swiss
   other-modules:       Data.Meteo.Swiss.Types
+                       , Data.Meteo.Swiss.Urls
   other-extensions:    OverloadedStrings
   build-depends:       base >=4.8 && < 4.10
                        , aeson >=0.8 && <1.1
