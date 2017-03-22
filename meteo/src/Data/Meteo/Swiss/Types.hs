@@ -1,4 +1,4 @@
- {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings #-}
 
 -- | Data types for the Swiss Meteo Net API
 module Data.Meteo.Swiss.Types
@@ -16,7 +16,7 @@ import           Data.String (IsString)
 import           Control.Monad (mzero)
 
 -- | A Swiss Meteo Network data SmnRecord.
--- It contains the meteo information of a 10 min interval of a Swis meteo station.
+-- It contains the meteo information of a 10 min interval of a Swiss meteo station.
 -- 
 -- /Note:/ All 'Text' fields may contain empty strings.
 data SmnRecord = SmnRecord 
