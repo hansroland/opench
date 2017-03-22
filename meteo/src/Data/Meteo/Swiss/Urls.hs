@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
--- | Data types for the Swiss Meteo Net API
+-- | URLs for the Swiss Meteo Net API
 module Data.Meteo.Swiss.Urls
   (
   -- * Functions that return URLs
