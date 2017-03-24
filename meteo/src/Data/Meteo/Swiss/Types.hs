@@ -11,6 +11,7 @@ module Data.Meteo.Swiss.Types
 import           Data.Aeson
 import qualified Data.Text as T
 import           Data.Time
+import           Data.Default
 import           Data.Aeson.Types (Parser) 
 import           Data.String (IsString)
 import           Control.Monad (mzero)
@@ -53,6 +54,23 @@ instance FromJSON SmnRecord where
     <*> v .:?! "qffPressure"
   parseJSON _ = mzero
 
+instance Default SmnRecord where
+  def = SmnRecord 
+    { smnStation = def
+    , smnCode = "" 
+    , smnDateTime = Nothing
+    , smnTemperature = ""
+    , smnSunshine = ""
+    , smnPrecipitation = ""
+    , smnWindDirection = ""
+    , smnWindSpeed = ""
+    , smnQnhPressure = ""
+    , smnGustPeak = ""
+    , smnHumidity = ""
+    , smnQfePressure = ""
+    , smnQffPressure = ""
+  }
+
 -- | A Swiss Meteo Network data station.
 --
 -- /Note:/ All 'Text' fields may contain empty strings.
@@ -77,6 +95,17 @@ instance FromJSON SmnStation where
     <*> v .:? "lng"
     <*> v .:? "elevation"
   parseJSON _ = mzero
+
+instance Default SmnStation where
+  def = SmnStation 
+    { staCode = ""
+    , staName = ""
+    , staCh1903Y = Nothing
+    , staCh1903X = Nothing
+    , staLat = Nothing
+    , staLng = Nothing
+    , staElevation = Nothing
+  }
  
 -- little helper combinator to parse and convert null values to empty Text strings.
 (.:?!) :: (Data.String.IsString a, FromJSON a) => Object -> T.Text -> Parser a
