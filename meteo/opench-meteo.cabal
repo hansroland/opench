@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                opench-meteo
-version:             0.0.92.0
+version:             0.1.0.0
 synopsis:            A Haskell implementation of the Swiss Meteo Net data API
 description:         OpenData SMN is a REST API for <http://www.meteoswiss.admin.ch/home/measurement-and-forecasting-systems/land-based-stations/automatisches-messnetz.html SwissMetNet > data.
                      The module Data.Meteo.Swiss contains the main documentation.
