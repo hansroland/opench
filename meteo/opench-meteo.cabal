@@ -14,7 +14,7 @@ maintainer:          rsx@bluewin.ch
 copyright:           Copyright by Roland Senn           
 category:            Data
 build-type:          Simple
-extra-source-files:  ChangeLog.md, default.nix
+extra-source-files:  ChangeLog.md
 cabal-version:       >=1.10
 
 library
