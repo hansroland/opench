@@ -10,3 +10,7 @@
 * Added: stack.yaml file
 * opendata.netcetera.com is now on https
 * update bounds for GHC 8.2.2
+
+## 0.2.0.1  -- 2017-12-27
+
+* Added: default.nix file
